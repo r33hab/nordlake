@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_nav_jobs
+    description: One row per job ad, latest version, with ad fields extracted from the feed JSON.
+    columns:
+      - name: ad_uuid
+        description: Nav's ad id.
+        data_tests: [unique, not_null]
+      - name: status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["ACTIVE", "INACTIVE"]
+      - name: title
+        data_tests: [not_null]
+      - name: has_details
+        description: True when the full ad was fetched (active ads only).
+
+  - name: stg_claude_messages
+    description: One row per assistant API message with token usage. Transcript lines are collapsed on message id.
+    columns:
+      - name: message_id
+        data_tests: [unique, not_null]
+      - name: sent_at
+        data_tests: [not_null]
+      - name: model
+        data_tests: [not_null]
+      - name: model_family
+        description: Model id without a trailing date snapshot. Joins to the model_prices seed.
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('model_prices')
+                field: model
+              config:
+                severity: warn
+      - name: session_id
+        data_tests: [not_null]
+
+  - name: stg_claude_prompts
+    description: One row per prompt a person typed. Tool results and meta turns are excluded.
+    columns:
+      - name: prompt_uuid
+        data_tests: [unique, not_null]
+      - name: sent_at
+        data_tests: [not_null]
+
+  - name: int_claude_message_costs
+    description: stg_claude_messages with list-price cost per message.
+    columns:
+      - name: message_id
+        data_tests: [unique, not_null]
+      - name: is_priced
+        data_tests: [not_null]

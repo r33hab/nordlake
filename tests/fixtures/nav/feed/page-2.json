@@ -1,0 +1,27 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Stillinger fra arbeidsplassen.nav.no (recorded fixture, synthetic ads)",
+  "home_page_url": "https://arbeidsplassen.nav.no",
+  "feed_url": "/api/v1/feed/page-2",
+  "description": "Last page: next_id is null, so a later run re-reads this page.",
+  "id": "page-2",
+  "next_id": null,
+  "next_url": null,
+  "items": [
+    {
+      "id": "33333333-3333-4333-8333-333333333333",
+      "url": "/api/v1/feedentry/33333333-3333-4333-8333-333333333333",
+      "title": "Data Engineer",
+      "content_text": "Stillingsannonse",
+      "date_modified": "2026-10-11T10:00:00+02:00",
+      "_feed_entry": {
+        "uuid": "33333333-3333-4333-8333-333333333333",
+        "status": "ACTIVE",
+        "title": "Data Engineer",
+        "businessName": "Nordlys Data AS",
+        "municipal": "TRONDHEIM",
+        "sistEndret": "2026-10-11T10:00:00+02:00"
+      }
+    }
+  ]
+}

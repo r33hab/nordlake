@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: bronze
+    description: >
+      Append-only Parquet written by `nordlake ingest`. One directory per source,
+      Hive-partitioned by ingest date. Every table has the same five columns; the
+      upstream object is a JSON string in `payload`.
+    meta:
+      external_location: "read_parquet('{{ var('bronze_dir') }}/{name}/ingest_date=*/*.parquet', hive_partitioning = true, union_by_name = true)"
+    tables:
+      - name: nav_jobs
+        description: Job ads from Nav's public vacancy feed. Key is the ad uuid.
+      - name: claude_transcripts
+        description: Usage metadata from Claude Code transcripts. Key is `assistant:<message id>` or `user:<uuid>`.

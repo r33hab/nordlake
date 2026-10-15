@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: claude_cost_daily
+    description: Claude Code spend per day, project and model family at list price.
+    columns:
+      - name: day
+        data_tests: [not_null]
+      - name: cost_usd
+        data_tests: [not_null]
+    data_tests:
+      - dbt_utils_free_unique_combination:
+          arguments:
+            columns: [day, project, model_family]
+
+  - name: claude_sessions
+    description: One row per Claude Code session with duration, prompts and cost.
+    columns:
+      - name: session_id
+        data_tests: [unique, not_null]
+      - name: started_at
+        data_tests: [not_null]
+
+  - name: job_postings_daily
+    description: Job ads published per day, sector and occupation group.
+    columns:
+      - name: day
+        data_tests: [not_null]
+      - name: ads
+        data_tests: [not_null]
+
+  - name: job_skill_mentions
+    description: Ads per week mentioning each skill in the skills seed.
+    columns:
+      - name: week
+        data_tests: [not_null]
+      - name: skill
+        data_tests: [not_null]

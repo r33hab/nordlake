@@ -1,0 +1,42 @@
+[project]
+name = "nordlake"
+version = "0.1.0"
+description = "A small lakehouse on Norwegian open data: Python ingest, dbt on DuckDB, Airflow orchestration."
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = { text = "MIT" }
+authors = [{ name = "r33hAB" }]
+keywords = ["lakehouse", "dbt", "duckdb", "airflow", "norway", "open-data"]
+dependencies = [
+    "httpx>=0.27",
+    "pyarrow>=17",
+    "duckdb>=1.1",
+    "dbt-core>=1.9,<2",
+    "dbt-duckdb>=1.9,<2",
+]
+
+[project.scripts]
+nordlake = "nordlake.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nordlake"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

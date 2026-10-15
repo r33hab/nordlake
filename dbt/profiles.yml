@@ -1,0 +1,7 @@
+nordlake:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('NORDLAKE_DUCKDB', '../data/nordlake.duckdb') }}"
+      threads: 4

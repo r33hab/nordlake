@@ -1,0 +1,33 @@
+{
+  "uuid": "11111111-1111-4111-8111-111111111111",
+  "sistEndret": "2026-10-10T08:00:00+02:00",
+  "status": "ACTIVE",
+  "ad_content": {
+    "uuid": "11111111-1111-4111-8111-111111111111",
+    "published": "2026-10-09T12:00:00+02:00",
+    "expires": "2026-11-09T00:00:00+02:00",
+    "updated": "2026-10-10T08:00:00+02:00",
+    "workLocations": [
+      {"country": "NORGE", "address": "Fjordgata 1", "city": "OSLO", "postalCode": "0150", "county": "OSLO", "municipal": "OSLO"}
+    ],
+    "contactList": [
+      {"name": "Synthetic Contact", "email": "contact@example.invalid", "phone": "00000000", "role": "Leder", "title": "Teknologisjef"}
+    ],
+    "title": "Senior backendutvikler",
+    "description": "<p>Fjordsoft søker en senior backendutvikler med solid erfaring i <strong>Kotlin</strong> og Spring Boot. Vi bruker Kafka for hendelsesdrevet arkitektur, kjører alt i Kubernetes på Azure og automatiserer med Terraform. Du må beherske norsk og ha minst fem års erfaring.</p>",
+    "sourceurl": "",
+    "source": "Stillingsregistrering",
+    "applicationUrl": "https://example.invalid/apply",
+    "applicationDue": "2026-11-01",
+    "occupationCategories": [{"level1": "IT", "level2": "Utvikling"}],
+    "categoryList": [{"categoryType": "STYRK08", "code": "2512", "name": "Programvareutviklere", "description": "", "score": 1.0}],
+    "jobtitle": "Senior backendutvikler",
+    "link": "https://arbeidsplassen.nav.no/stillinger/stilling/11111111-1111-4111-8111-111111111111",
+    "employer": {"name": "Fjordsoft AS", "orgnr": "999000001", "description": "", "homepage": ""},
+    "engagementtype": "Fast",
+    "extent": "Heltid",
+    "starttime": "",
+    "positioncount": "2",
+    "sector": "Privat"
+  }
+}

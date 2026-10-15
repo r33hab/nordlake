@@ -1,0 +1,24 @@
+# local data: bronze parquet, cursors, the DuckDB file
+data/
+demo-data/
+*.duckdb
+*.duckdb.wal
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+logs/
+
+# editors and OS
+.DS_Store
+.idea/
+.vscode/

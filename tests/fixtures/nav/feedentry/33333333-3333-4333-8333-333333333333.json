@@ -1,0 +1,31 @@
+{
+  "uuid": "33333333-3333-4333-8333-333333333333",
+  "sistEndret": "2026-10-11T10:00:00+02:00",
+  "status": "ACTIVE",
+  "ad_content": {
+    "uuid": "33333333-3333-4333-8333-333333333333",
+    "published": "2026-10-11T09:30:00+02:00",
+    "expires": "2026-10-31T00:00:00+02:00",
+    "updated": "2026-10-11T10:00:00+02:00",
+    "workLocations": [
+      {"country": "NORGE", "address": "Nordlysveien 7", "city": "TRONDHEIM", "postalCode": "7030", "county": "TRØNDELAG", "municipal": "TRONDHEIM"}
+    ],
+    "contactList": [],
+    "title": "Data Engineer",
+    "description": "<p>Nordlys Data bygger en dataplattform med dbt, Airflow og Python på Snowflake. Du får ansvar for ELT-pipelines, datakvalitet og CI/CD. Erfaring med Kubernetes er en fordel.</p>",
+    "sourceurl": "",
+    "source": "Stillingsregistrering",
+    "applicationUrl": "https://example.invalid/apply",
+    "applicationDue": "Snarest",
+    "occupationCategories": [{"level1": "IT", "level2": "Data"}],
+    "categoryList": [{"categoryType": "STYRK08", "code": "2511", "name": "Systemanalytikere/-arkitekter", "description": "", "score": 1.0}],
+    "jobtitle": "Data Engineer",
+    "link": "https://arbeidsplassen.nav.no/stillinger/stilling/33333333-3333-4333-8333-333333333333",
+    "employer": {"name": "Nordlys Data AS", "orgnr": "999000003", "description": "", "homepage": ""},
+    "engagementtype": "Fast",
+    "extent": "Heltid",
+    "starttime": "",
+    "positioncount": "1",
+    "sector": "Offentlig"
+  }
+}

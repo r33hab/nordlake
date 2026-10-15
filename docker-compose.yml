@@ -1,0 +1,27 @@
+# Airflow in standalone mode with the repo mounted. First start installs the project into the
+# image (a minute or two); the admin password is printed in the logs:
+#   docker compose up
+#   docker compose logs airflow | grep -i password
+# UI: http://localhost:8080
+services:
+  airflow:
+    image: apache/airflow:3.1.0
+    command: standalone
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+      _PIP_ADDITIONAL_REQUIREMENTS: "-e /opt/nordlake"
+      NORDLAKE_HOME: /opt/nordlake
+      NORDLAKE_DATA_DIR: /opt/nordlake/data
+      # Point this at a mounted copy of ~/.claude/projects to ingest transcripts from inside the container.
+      # NORDLAKE_CLAUDE_PROJECTS_DIR: /host/claude-projects
+    volumes:
+      - ./orchestration/airflow/dags:/opt/airflow/dags:ro
+      - ./:/opt/nordlake
+      - airflow-home:/opt/airflow
+      # - ~/.claude/projects:/host/claude-projects:ro
+
+volumes:
+  airflow-home:

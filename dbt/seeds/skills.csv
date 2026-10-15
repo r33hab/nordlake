@@ -1,0 +1,51 @@
+skill,category,pattern
+Kotlin,language,\bkotlin\b
+Java,language,\bjava\b
+C#,language,\bc#
+.NET,language,\.net\b
+Python,language,\bpython\b
+TypeScript,language,\btypescript\b
+JavaScript,language,\bjavascript\b
+Go,language,\bgolang\b
+Rust,language,\brust\b
+C++,language,\bc\+\+
+React,frontend,\breact\b
+Angular,frontend,\bangular\b
+Vue,frontend,\bvue\b
+Spring Boot,backend,\bspring boot\b
+Kafka,data,\bkafka\b
+PostgreSQL,data,\bpostgres
+Oracle,data,\boracle\b
+SQL Server,data,\bsql server\b
+Snowflake,data,\bsnowflake\b
+Databricks,data,\bdatabricks\b
+dbt,data,\bdbt\b
+Airflow,data,\bairflow\b
+Spark,data,\bspark\b
+Kubernetes,platform,\bkubernetes\b|\bk8s\b
+Docker,platform,\bdocker\b
+Terraform,platform,\bterraform\b
+Helm,platform,\bhelm\b
+ArgoCD,platform,\bargo ?cd\b
+GitOps,platform,\bgitops\b
+CI/CD,platform,\bci/cd\b|\bci-cd\b
+GitHub Actions,platform,\bgithub actions\b
+Azure,cloud,\bazure\b
+AWS,cloud,\baws\b|\bamazon web services\b
+GCP,cloud,\bgcp\b|\bgoogle cloud\b
+OAuth/OIDC,security,\boauth\b|\boidc\b|\bopenid\b
+Keycloak,security,\bkeycloak\b
+Entra ID,security,\bentra id\b|\bazure ad\b
+Security clearance,other,\bsikkerhetsklarer
+LLM/AI,ai,\bllm\b|\bspråkmodell|\bkunstig intelligens\b|\bgenerativ ki\b|\bgenerative ai\b|\bmaskinlæring\b|\bmachine learning\b
+RAG,ai,\brag\b
+MCP,ai,\bmcp\b|\bmodel context protocol\b
+Copilot,ai,\bcopilot\b
+Claude,ai,\bclaude\b
+Accessibility,frontend,\buniversell utforming\b|\bwcag\b
+Playwright,testing,\bplaywright\b
+Power Platform,platform,\bpower platform\b|\bpower apps\b|\bpower automate\b
+Microservices,architecture,\bmikrotjenester\b|\bmicroservices\b
+Event-driven,architecture,\bhendelsesdrev|\bevent-driven\b|\bevent driven\b
+DDD,architecture,\bdomain-driven\b|\bdomain driven\b|\bddd\b
+Observability,platform,\bobservability\b|\bgrafana\b|\bprometheus\b|\bopentelemetry\b

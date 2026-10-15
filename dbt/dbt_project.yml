@@ -1,0 +1,42 @@
+name: nordlake
+version: "0.1.0"
+config-version: 2
+profile: nordlake
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+target-path: target
+clean-targets: [target, dbt_packages]
+
+vars:
+  # Where the bronze Parquet files live, relative to this directory (or absolute).
+  bronze_dir: "../data/bronze"
+
+models:
+  nordlake:
+    silver:
+      +materialized: table
+      +schema: silver
+    gold:
+      +materialized: table
+      +schema: gold
+
+seeds:
+  nordlake:
+    +schema: ref
+    model_prices:
+      +column_types:
+        model: varchar
+        input_usd_per_mtok: double
+        cache_write_5m_usd_per_mtok: double
+        cache_write_1h_usd_per_mtok: double
+        cache_read_usd_per_mtok: double
+        output_usd_per_mtok: double
+        price_date: date
+    skills:
+      +column_types:
+        skill: varchar
+        category: varchar
+        pattern: varchar
