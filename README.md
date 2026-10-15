@@ -1,5 +1,9 @@
 # nordlake
 
+> **Status: unfinished and under active development.** The ingest framework, both sources,
+> the dbt models and the CI run work end to end, but the project is a few days old. Expect
+> breaking changes to model names and the CLI, and see the roadmap below for what is missing.
+
 A small lakehouse on Norwegian open data. Python pulls sources into an append-only bronze
 layer of Parquet files, dbt turns them into silver and gold tables on DuckDB, and Airflow
 runs the whole thing nightly. Everything runs on a laptop and in CI with no services.
